@@ -84,6 +84,11 @@ class sram():
             mb = sram_multibank(self.s)
             mb.verilog_write(name[:-2] + '_top.v')
 
+    def yosys_write(self, library_name, map_name):
+        """Write the Yosys memory library and technology map for this SRAM."""
+        from openram.base.yosys import yosys
+        yosys(self.s).write(library_name, map_name)
+
     def extended_config_write(self, name):
         """Dump config file with all options.
            Include defaults and anything changed by input config."""
@@ -213,6 +218,10 @@ class sram():
         debug.print_raw("Verilog: Writing to {0}".format(vname))
         self.verilog_write(vname)
         print_time("Verilog", datetime.datetime.now(), start_time)
+
+        if OPTS.output_yosys:
+            self.yosys_write(OPTS.output_path + self.s.name + '.memlib',
+                             OPTS.output_path + self.s.name + '_map.v')
 
         # Write out options if specified
         if OPTS.output_extended_config:

@@ -139,6 +139,8 @@ class options(optparse.Values):
     use_pex = False
     # Output config with all options
     output_extended_config = False
+    # Write a Yosys memory library and Verilog technology map
+    output_yosys = False
     # Output temporary file used to format HTML page
     output_datasheet_info = True
     # Determines which analytical model to use.

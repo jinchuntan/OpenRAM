@@ -14,6 +14,7 @@ navigate through the documentation.
 1. [Basic SRAM Usage](./basic_usage.md#go-back)
 1. [Basic ROM Usage](./basic_rom_usage.md#go-back)
 1. [Python Library](./python_library.md#go-back)
+1. [Yosys Memory Mapping](./yosys.md#go-back)
 1. [Bitcells](./bitcells.md#go-back)
 1. [Architecture](./architecture.md#go-back)
 1. [Implementation](#implementation)

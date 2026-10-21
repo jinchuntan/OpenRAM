@@ -35,6 +35,7 @@
               pkgs.netgen-vlsi
               pkgs.ngspice
               pkgs.iverilog
+              pkgs.yosys
               pkgs.xyce
               pkgs.xyce-parallel
               pkgs.trilinos
